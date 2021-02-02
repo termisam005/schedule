@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta  http-equiv="Content-Type"  content="text/html;charset=utf-8"/> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sample01 - dashboard</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../fontawesome-free-5.13.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_ui.css" />
+  <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="../js/com_ui.js"></script> 
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="Dash_body">
+
+		<header>
+			<div class="header_in">
+				<div class="header_left">
+					<h1 class="logo biglogo">
+						<a href="../dash/dashboard.html"><img src="../images/logo_ui_wh.png" /></a>
+					</h1>
+					<p class="btn_trans"></p>
+				</div><!-- header_left -->
+
+				<div class="header_right">
+					<div class="right_div btbox">
+						<a class="go_right btn_togg">
+							<i class="fas fa-user-circle"></i>
+							<span class="user">
+								홍길동님 환영합니다.
+							</span>
+						</a>
+					</div><!-- right_div -->
+					<div class="right_div">
+						<button type="button" class="btn btn-ui1" onclick="location.href='../index.html'">로그아웃</button>
+					</div>
+				</div><!-- header_right -->
+			</div><!-- header_in -->
+		</header>
+
+		<aside class="dash_aside">
+			<div class="side_conts">
+				<h2 class="left_name">MENU</h2>
+				<ul class="left_menu">
+					<li>
+						<a class="selb_link" href="../schedule/toast.html">
+							<img class="icon_sched" src="../images/sv_notice.svg" />
+							<span class="menu_name">스케줄 보기</span>
+						</a>
+					</li>
+					<li>
+						<a class="selb_link" href="../schedule/toastui.html">
+							<img src="../images/sv_dash.svg" />
+							<span class="menu_name">스케줄 등록/수정</span>
+						</a>
+					</li>
+				</ul><!-- left_menu -->
+			</div><!-- side_conts -->
+		</aside><!-- dash_aside -->
+
+		<section class="top_line">
+			<div class="jfbet">
+				<h2 class="top_title control_title">
+					스케줄 보기
+				</h2>
+				<div class="location">
+					<p>
+						<img class="ion" src="../images/sv_home.svg" />Home
+					</p>
+					<p class="arrow">
+						<img src="../images/sv_arr_loc.svg" />
+					</p>
+                    <p>스케줄 보기</p>
+				</div><!--location-->
+			</div>
+		</section><!-- top_line -->
+
+		<section class="content">
+			<div class="row">
+				<div class="col-xl-12">
+
+					<div class="wrap_sched">
+
+						<section class="sched_top">
+							<div class="row">
+								<div class="col-xl-4">
+									<article class="group_week">
+										<div class="line_week">
+											<button type="button" class="btn_round">초기화</button>
+											<button type="button" class="btn_round">Today</button>
+											<div class="selt_week">
+												<button type="button" class="btn_selt">
+													<span class="arr_left"></span>
+												</button>
+												<div class="the_week">
+													<span class="wk_date">2021/01/17</span>
+													<span class="wave">~</span> 
+													 <span class="wk_date">2021/01/23</span>
+												</div><!--the_week-->
+												<button type="button" class="btn_selt">
+													<span class="arr_right"></span>
+												</button>
+											</div><!--selt_week-->
+										</div><!--line_week-->				 
+										<div class="line_today">
+											<p class="the_today">
+												<span class="img_calen">
+													<i class="fas fa-calendar-alt"></i>
+												</span>
+												<span class="the_day">
+													2021-01-18 월요일
+												</span>
+											</p>
+											<!--<p class="the_display">
+												<span class="mark rep"></span>
+												<span class="word rep">수정</span>
+											</p>-->
+										</div><!--line_today-->
+									</article><!--group_week-->
+								</div>
+
+								<div class="col-xl-8">
+									<article class="group_button">
+										<div class="gr_search">
+											<input type="text" class="form-control w140" placeholder="이름검색">
+											<button type="button" class="btn btn-primary m-l-5">검색</button>
+										</div>
+										<div class="line_teams">
+											<button type="button" class="btn_contact">전사지원팀</button>
+											<button type="button" class="btn_contact">빅데이터기술본부</button>
+											<button type="button" class="btn_contact">PMO기술본부</button>
+											<button type="button" class="btn_contact">컨설팅본부</button>
+											<button type="button" class="btn_contact">UILabs</button>
+										</div><!--line_teams-->
+										<div class="line_enroll">
+											<button type="button" class="btn_contact">
+												<span class="bge ct_unreg"></span>
+												<span class="btext">미등록: 6</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_vac"></span>
+												<span class="btext">휴가: 3</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_eight"></span>
+												<span class="btext">8시: 6</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_nine"></span>
+												<span class="btext">9시: 7</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_ten"></span>
+												<span class="btext">10시: 5</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_out"></span>
+												<span class="btext">외근: 2</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_disp"></span>
+												<span class="btext">파견: 3</span>
+											</button>
+											<button type="button" class="btn_contact">
+												<span class="bge ct_home"></span>
+												<span class="btext">재택: 1</span>
+											</button>
+										</div><!--line_enroll-->
+									</article><!--group_button-->
+								</div>
+							</div><!--row-->
+						</section><!--sched_top-->
+
+						<section class="sched_calendar">
+
+							<article class="days_line">
+								<div class="call_team"></div>
+								<div class="call_week">
+									<div class="day_room">
+										<p class="days sunday">
+											<span class="number">10</span>
+											<span class="yoil">Sun</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days">
+											<span class="number">11</span>
+											<span class="yoil">Mon</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days">
+											<span class="number">12</span>
+											<span class="yoil">Tue</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days today">
+											<span class="number">13</span>
+											<span class="yoil">Wed</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days future">
+											<span class="number">14</span>
+											<span class="yoil">Thu</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days future">
+											<span class="number">15</span>
+											<span class="yoil">Fri</span>
+										</p>
+									</div><!--day_room-->
+									<div class="day_room">
+										<p class="days future">
+											<span class="number">16</span>
+											<span class="yoil">Sat</span>
+										</p>
+									</div><!--day_room-->
+								</div>
+							</article><!--days_line-->
+
+							<article class="calen_line first_calen">
+								<div class="call_team">
+									<span class="team_name">전사지원팀</span>
+								</div><!--call_team-->
+
+								<div class="call_week">
+									<div class="week_room weekend">
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div><!--member_bar-->
+											<div class="memb_hidd trans_space"></div>
+                                            <div class="memb_hidd memb_pop">
+                                                <div class="wh_board">
+                                                    <p class="arr_up">
+                                                        <i class="fas fa-caret-up"></i>
+                                                    </p>
+                                                    <div class="top">
+                                                        <h3>수정 목록</h3>
+                                                        <span class="tp_close">닫기</span>
+                                                    </div>
+                                                    <div class="about_rep">
+                                                        <span class="no_info">수정이력이 없습니다.</span>
+                                                    </div>
+                                                </div><!--wh_board-->
+                                            </div><!--memb_hidd-->
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room weekend">
+									</div><!--week_room-->
+								</div><!--call_week-->
+							</article><!--calen_line-->
+
+							<article class="calen_line">
+								<div class="call_team">
+									<span class="team_name">빅데이터<br>기술본부</span>
+								</div><!--call_team-->
+								<div class="call_week">
+									<div class="week_room weekend">
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_repair"></span>
+													<span class="bge ct_eight"></span>
+												</div>
+											</div><!--member_bar-->
+											<div class="memb_hidd trans_space"></div>
+                                            <div class="memb_hidd memb_pop">
+                                                <div class="wh_board">
+                                                    <p class="arr_up">
+                                                        <i class="fas fa-caret-up"></i>
+                                                    </p>
+                                                    <div class="top">
+                                                        <h3>수정 목록</h3>
+                                                        <span class="tp_close">닫기</span>
+													</div>	
+                                                    <div class="about_rep">
+                                                        <table class="gray_table nodd_table">
+															<thead>
+																<tr>
+																	<th>내용</th>
+																	<th>수정시간</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">파견</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div><!--about_rep-->					
+                                                </div><!--wh_board-->
+                                            </div><!--memb_hidd-->
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->	
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_repair"></span>
+													<span class="bge ct_out"></span>
+												</div>
+											</div><!--member_bar-->
+											<div class="memb_hidd trans_space"></div>
+                                            <div class="memb_hidd memb_pop">
+                                                <div class="wh_board">
+                                                    <p class="arr_up">
+                                                        <i class="fas fa-caret-up"></i>
+                                                    </p>
+                                                    <div class="top">
+                                                        <h3>수정 목록</h3>
+                                                        <span class="tp_close">닫기</span>
+													</div>	
+                                                    <div class="about_rep">
+                                                        <table class="gray_table nodd_table">
+															<thead>
+																<tr>
+																	<th>내용</th>
+																	<th>수정시간</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">9시</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">미등록</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">외근</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div><!--about_rep-->					
+                                                </div><!--wh_board-->
+                                            </div><!--memb_hidd-->
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_repair"></span>
+													<span class="bge ct_ten"></span>
+												</div>
+											</div><!--member_bar-->
+											<div class="memb_hidd trans_space"></div>
+                                            <div class="memb_hidd memb_pop">
+                                                <div class="wh_board">
+                                                    <p class="arr_up">
+                                                        <i class="fas fa-caret-up"></i>
+                                                    </p>
+                                                    <div class="top">
+                                                        <h3>수정 목록</h3>
+                                                        <span class="tp_close">닫기</span>
+													</div>	
+                                                    <div class="about_rep">
+                                                        <table class="gray_table nodd_table">
+															<thead>
+																<tr>
+																	<th>내용</th>
+																	<th>수정시간</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="process">
+																		<div class="proce_line">
+																			<span class="mini">9시</span>
+																			<span class="ic_arr"><img src="../images/arr_mini_right.png"></span>
+																			<span class="mini">10시</span>
+																		</div><!--proce_line-->
+																	</td>
+																	<td>
+																		<span class="mini">2021-01-16 14:38:18.0</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div><!--about_rep-->					
+                                                </div><!--wh_board-->
+                                            </div><!--memb_hidd-->
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_disp"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->	
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+
+
+									<div class="week_room weekend">
+									</div><!--week_room-->
+								</div><!--call_week-->
+							</article><!--calen_line-->
+
+							<article class="calen_line">
+								<div class="call_team">
+									<span class="team_name">PMO 본부</span>
+								</div><!--call_team-->
+								<div class="call_week">
+									<div class="week_room weekend">
+									</div><!--week_room-->
+
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_disp"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_home"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->	
+									</div><!--week_room-->
+									
+									<div class="week_room weekend">
+									</div><!--week_room-->
+								</div><!--call_week-->
+							</article><!--calen_line-->
+
+							<article class="calen_line">
+								<div class="call_team">
+									<span class="team_name">컨설팅<br>사업본부</span>
+								</div><!--call_team-->
+								<div class="call_week">
+									<div class="week_room weekend">
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_disp"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_home"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->	
+									</div><!--week_room-->
+									
+									<div class="week_room weekend">
+									</div><!--week_room-->
+								</div><!--call_week-->
+							</article><!--calen_line-->
+
+							<article class="calen_line">
+								<div class="call_team">
+									<span class="team_name">UILabs</span>
+								</div><!--call_team-->
+								<div class="call_week">
+									<div class="week_room weekend">
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_ten"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_disp"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->		
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_vac"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_home"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+									</div><!--week_room-->
+									
+									<div class="week_room">
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_nine"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_unreg"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->
+										<div class="member_space">
+											<div class="member_bar">
+												<div class="betw_left">
+													<span class="member">김의영</span>
+												</div>
+												<div class="betw_right">
+													<span class="bge ct_eight"></span>
+												</div>
+											</div>
+										</div><!--member_space-->	
+									</div><!--week_room-->
+									
+									<div class="week_room weekend">
+									</div><!--week_room-->
+								</div><!--call_week-->
+							</article><!--calen_line-->
+
+						</section><!--sched_calendar-->
+
+					</div><!--wrap_sched-->
+
+				</div>	
+			</div><!--row-->
+        </section><!--content-->
+
+	</div><!-- Dash_body -->
+</div><!-- wrap -->
+
+</body>
+
+ </html>
